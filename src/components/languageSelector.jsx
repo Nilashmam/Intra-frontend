@@ -14,7 +14,7 @@ const LanguageSelector = ({ language, onSelect }) => {
     return (
         <div style={{padding : '10px'}}>
             <label htmlFor="language-select">Choose a language: </label>
-            <select id="language-select" value={selectedLanguage} onChange={handleChange}>
+            <select id="language-select" style={{fontSize:18,borderRadius:5}} value={selectedLanguage} onChange={handleChange}>
                 {languages.map(([language, version]) => (
                     <option key={language} value={language}>
                         {language.charAt(0).toUpperCase() + language.slice(1)} (version {version})

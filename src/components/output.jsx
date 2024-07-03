@@ -27,9 +27,9 @@ const output = ({ editorRef, language }) => {
     }
     return (
         <div style={{padding  : '5px'}}>
-            <button style={{ marginTop: '40px', width: '100%'}} onClick={runCode}>Run Code</button>
+            <button style={{ marginTop: '40px', width: '100%' , border: '2px Solid black' , fontSize: '20px'}} onClick={runCode}>Run Code</button>
             <textarea
-                style={{ marginTop: '7px' , width: '300px', height: '585px', resize : 'none' }}
+                style={{ marginTop: '7px' , width: '340px', height: '765px', resize : 'none',border: '2px Solid black' , fontSize: '20px'}}
                 readOnly
                 value={code}
             />

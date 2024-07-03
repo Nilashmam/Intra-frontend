@@ -12,7 +12,7 @@ const dashboard = () => {
   return (
     <div>
       <button style={{ position: 'absolute', top: '15px', right: '15px' , padding : '10px' , borderRadius : '5px' , border : '2px Solid black' }} onClick={logoutUser}>Logout</button>
-      dashboard {user.username} {user.userType}
+      dashboard 
       <div style={{alignItems : 'center'}}>
       <Code/>
       </div>
