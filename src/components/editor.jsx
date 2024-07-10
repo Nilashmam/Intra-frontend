@@ -53,7 +53,7 @@ const editor = () => {
   }
 
   useEffect(() => {
-    const socketInstance = io.connect("http://localhost:5000");
+    const socketInstance = io.connect("https://intra-backend.onrender.com");
     setSocket(socketInstance);
 
     return () => {

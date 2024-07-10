@@ -21,7 +21,7 @@ const receiverDashboard = () => {
   let [output, setOutput] = useState('')
 
   useEffect(() => {
-    const socket = io.connect('http://localhost:5000');
+    const socket = io.connect('https://intra-backend.onrender.com');
     setSocket(socket);
 
     return () => {

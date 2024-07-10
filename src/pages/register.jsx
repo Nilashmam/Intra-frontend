@@ -23,7 +23,7 @@ const register = () => {
     const registerUser = (e) => {
           e.preventDefault()
           console.log(userData)
-          axios.post('http://localhost:5000/user/register',userData)
+          axios.post('https://intra-backend.onrender.com',userData)
           .then(
             response => console.log(response),
             navigate('/login')
