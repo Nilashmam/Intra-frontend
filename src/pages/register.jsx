@@ -37,7 +37,7 @@ const register = () => {
   ) : (
     <div
       className=" flex justify-end h-full  min-h-screen px-20 py-5 bg-[url('https://images.pexels.com/photos/3746957/pexels-photo-3746957.jpeg')] bg-no-repeat bg-contain"
-      style={{ backgroundSize: "60%" }}
+      style={{ backgroundSize: "65%" }}
     >
       <Card color="transparent" shadow={false}>
         <Typography variant="h4" color="blue-gray">

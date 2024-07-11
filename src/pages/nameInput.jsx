@@ -1,57 +1,69 @@
-import {React , useState} from 'react'
-import {v4 as uuidv4} from 'uuid'
-import { useNavigate } from 'react-router-dom'
-import Logout from '../components/logout'
-import '../App.css'
-
+import { React, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
+import Logout from "../components/logout";
+import "../App.css";
+import {
+  Card,
+  Input,
+  Checkbox,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
 
 const nameInput = () => {
-    const navigate = useNavigate()
-    const [userData,setUserData] = useState({
-        username : ''
-    })
-    const redirect = () => {
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState({
+    username: "",
+  });
+  const redirect = () => {
+    const urlCode = uuidv4().replace(/-/g, "").substring(0, 8);
+    navigate(`/receiver/${urlCode}/${userData.username}`);
+  };
 
-        const urlCode = uuidv4().replace(/-/g, '').substring(0,8);
-        navigate(`/receiver/${urlCode}/${userData.username}`)
-
-    }
-
-    return (
-        <div>
-        <div align="center">
-            <Logout />
-            <h1>Enter the username of the candidate you want to take interview</h1>
-            <form onSubmit={redirect} className='formStyle' style={{ width: '27%' }}>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p style={{ fontSize: '20px' }}>Username: </p>
-                            </td>
-                            <td style={{paddingRight:'20px'}}>
-                                <input
-                                    className="inputStyle"
-                                    type="text"
-                                    name="username"
-                                    value={userData.username}
-                                    onChange={(e) => setUserData({ ...userData, username: e.target.value })}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colSpan="2">
-                                <div style={{ textAlign: 'right'}}>
-                                    <button className='submit-button' style={{ width: '115%'}}type="submit">Submit</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+  return (
+    <div>
+      <Logout />
+      <div className="justify-center flex h-full">
+        <Card
+          className="flex-row"
+          shadow={false}
+          style={{ border: "4px solid black", marginTop: "7%"}}
+        >
+          <img
+            src="https://images.pexels.com/photos/11982694/pexels-photo-11982694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            className=" w-5/12 basic-1/4 object-contain rounded-l-md"
+          />
+          <form
+            className="basic-1/4 pt-20 pl-20"
+            onSubmit={redirect}
+          >
+            <div className="mb-1 flex flex-col gap-6">
+              <Typography variant="h6" color="blue-gray" className="mb-3">
+                Candidate Name
+              </Typography>
+              <Input
+                size="lg"
+                placeholder="candidate name"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900 w-96"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                name="username"
+                value={userData.username}
+                onChange={(e) =>
+                  setUserData({ ...userData, username: e.target.value })
+                }
+              />
+            </div>
+            <Button type="submit" className="mt-4" fullWidth>
+              Submit
+            </Button>
+          </form>
+        </Card>
+      </div>
     </div>
-    )
-}
+  );
+};
 
-export default nameInput
+export default nameInput;
