@@ -28,24 +28,24 @@ const nameInput = () => {
         <Card
           className="flex-row"
           shadow={false}
-          style={{ border: "4px solid black", marginTop: "7%"}}
+          style={{ border: "2px solid black", marginTop: "7%"}}
         >
           <img
             src="https://images.pexels.com/photos/11982694/pexels-photo-11982694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className=" w-5/12 basic-1/4 object-contain rounded-l-md"
+            className=" w-1/2 basic-1/4 object-contain rounded-l-md"
           />
           <form
-            className="basic-1/4 pt-20 pl-20"
+            className="mt-8 mb-2 max-w-screen-lg basic-1/4 pt-20 pl-20"
             onSubmit={redirect}
           >
-            <div className="mb-1 flex flex-col gap-6">
+            <div className="mb-1 flex flex-col gap-6 w-96">
               <Typography variant="h6" color="blue-gray" className="mb-3">
                 Candidate Name
               </Typography>
               <Input
                 size="lg"
                 placeholder="candidate name"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900 w-96"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
@@ -56,7 +56,8 @@ const nameInput = () => {
                 }
               />
             </div>
-            <Button type="submit" className="mt-4" fullWidth>
+
+            <Button type="submit" className="mt-6" fullWidth>
               Submit
             </Button>
           </form>
