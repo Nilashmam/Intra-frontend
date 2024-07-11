@@ -33,7 +33,7 @@ const register = () => {
   };
 
   return user ? (
-    <Navigate to="/dashboard" />
+    <Navigate to="/redirector" />
   ) : (
     <div
       className=" flex justify-end h-full  min-h-screen px-20 py-5 bg-[url('https://images.pexels.com/photos/3746957/pexels-photo-3746957.jpeg')] bg-no-repeat bg-contain"

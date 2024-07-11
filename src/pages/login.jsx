@@ -10,21 +10,10 @@ const login = () => {
     let {loginUser} = useContext(userContext)
     let {user} = useContext(userContext)
 
-    if(user)
-        {
-            if(user.type == "Candidate")
-                {
-                    return <Navigate to="/linkInput"/>
-                }
-            else if(user.type == "Interviewer")
-                {
-                    return <Navigate to="/receiverDashboard"/>
-                }
-        }
-    else
-    {
-        return (
-            <div>
+    return user ? (
+        <Navigate to="/redirector" />
+    ) : (
+        <div>
             <div align="center">
                 <form onSubmit={loginUser} className='formStyle'>
                     <table>
@@ -57,9 +46,7 @@ const login = () => {
                 </form>
             </div>
         </div>
-        )
-    }
-
+    )
 
 };
 

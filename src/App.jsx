@@ -9,7 +9,7 @@ import InterviewerRoute from './components/interviewerRoute'
 import ReceiverDashboard from './pages/receiverDashboard'
 import NameInput from './pages/nameInput'
 import LinkInput from './pages/linkInput'
-
+import Redirector from './pages/redirector'
 
 function App() {
 
@@ -21,6 +21,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/redirector' element={<Redirector/>} />
+          
           <Route element={<PrivateRoute />}>
             <Route path="/linkInput" element={<LinkInput />} />
             <Route path='/dashboard/:urlCode' element={<Dashboard />} />
