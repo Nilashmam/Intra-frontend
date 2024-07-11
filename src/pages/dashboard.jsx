@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import userContext from '../context/userContext'
 import Code from '../components/editor'
-
+import Logout from '../components/logout'
 
 
 const dashboard = () => {
@@ -11,9 +11,8 @@ const dashboard = () => {
 
   return (
     <div>
-      <button style={{ position: 'absolute', top: '15px', right: '15px' , padding : '10px' , borderRadius : '5px' , border : '2px Solid black' }} onClick={logoutUser}>Logout</button>
-      dashboard 
-      <div style={{alignItems : 'center'}}>
+      <Logout/>
+      <div>
       <Code/>
       </div>
     </div>

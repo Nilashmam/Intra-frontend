@@ -82,32 +82,29 @@ const editor = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ padding: '10px' }}>
-        </div>
-        <div style={{ width: '100%' }}>
+      <div className="justify-start flex">
+        <div className='p-4'>
           <LanguageSelector language={language} onSelect={onSelect} />
           <Editor
-            height="89vh"
-            width='170vh'
             theme="vs-dark"
+            height='800px'
+            width='1250px'
             language={language}
             value={value}
             options={{ fontSize: 20 }}
             onMount={onMount}
             onChange={(newValue, event) => setValue(newValue)}
-
           />
         </div>
         <div style={{ padding: '5px' }}>
           <button
-            style={{ marginTop: '40px', width: '100%', border: '2px solid black', fontSize: '20px' }}
+            style={{ marginTop: '55px', width: '120%', border: '2px solid black', fontSize: '20px' }}
             onClick={runCode}
           >
             Run Code
           </button>
           <textarea
-            style={{ marginTop: '7px', width: '340px', height: '752px', resize: 'none', border: '2px solid black', fontSize: '20px' }}
+            style={{ marginTop: '7px', width: '120%', height: '757px', resize: 'none', border: '2px solid black', fontSize: '20px' }}
             readOnly
             value={"output here -  \n"+code}
           />

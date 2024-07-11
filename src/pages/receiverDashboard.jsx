@@ -45,26 +45,21 @@ const receiverDashboard = () => {
   return (
     <div>
       <Logout/>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              Share this room to Candidate :
-            </td>
-            <td>
-              <textarea
-                style={{ marginTop: '35px', width: '360px', height: '20px', resize: 'none', border: '2px Solid black', borderRadius: '5px' }}
+      
+      <div className='justify-start flex'>
+        <div className='p-4'>
+        
+        <div className='justify-start flex p-2' >
+        <p className='pr-4'><b>Share this room with candidate : </b></p>
+        <textarea
+                style={{  width: '360px', height: '30px', resize: 'none', border: '2px Solid black', borderRadius: '5px' }}
                 readOnly
                 value={`${urlCode}`}
               />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        </div>
         <Editor
-          height="90vh"
-          width='220vh'
+          height="84vh"
+          width='1200px'
           theme="vs-dark"
           options={{ fontSize: 20 }}
           language={codeLanguage}
@@ -73,15 +68,16 @@ const receiverDashboard = () => {
         //   onMount={onMount}
         //   onChange={(newValue, event) => setValue(newValue)}
         />
+        </div>
         <div>
           <div style={{ padding: '5px' }}>
             <button
-              style={{ width: '100%', border: '2px solid black', fontSize: '20px' }}
+              style={{ marginTop: '55px' , width: '100%', border: '2px solid black', fontSize: '20px' }}
             >
               Run Code
             </button>
             <textarea
-              style={{ marginTop: '7px', width: '340px', height: '755px', resize: 'none', border: '2px solid black', fontSize: '20px' }}
+              style={{ marginTop: '7px', width: '434px', height: '770px', resize: 'none', border: '2px solid black', fontSize: '20px' }}
               readOnly
               value={output}
             />
