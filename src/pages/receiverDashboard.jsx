@@ -41,7 +41,7 @@ const receiverDashboard = () => {
       <Logout />
 
       <div className="justify-center flex">
-        <div className="p">
+        <div className="pr-4">
           <div className="justify-start flex p-2">
             <p className="pr-4">
               <b>Share this room with candidate : </b>
@@ -54,7 +54,7 @@ const receiverDashboard = () => {
               }}
               className="h-8"
               readOnly
-              value={`${urlCode}`}
+              value={`           ${urlCode}`}
             />
           </div>
           <Editor
