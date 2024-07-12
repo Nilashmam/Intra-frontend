@@ -4,6 +4,13 @@ import userContext from "../context/userContext";
 import io from "socket.io-client";
 import { useParams } from "react-router-dom";
 import Logout from "../components/logout";
+import {
+  Card,
+  Input,
+  Checkbox,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
 
 const receiverDashboard = () => {
   const { urlCode } = useParams();
@@ -39,7 +46,6 @@ const receiverDashboard = () => {
   return (
     <div>
       <Logout />
-
       <div className="justify-center flex">
         <div className="pr-4">
           <div className="justify-start flex p-2">
@@ -59,7 +65,7 @@ const receiverDashboard = () => {
           </div>
           <Editor
             height="84vh"
-            width="1200px"
+            width="1180px"
             theme="vs-dark"
             options={{ fontSize: 20 }}
             language={codeLanguage}
@@ -71,18 +77,18 @@ const receiverDashboard = () => {
         </div>
         <div>
           <div style={{ padding: "5px" }} className="w-96">
-            <button
-              style={{ border: "2px solid black", fontSize: "20px" }}
+            <Button
+              style={{ border: "2px solid black" }}
               className="mt-10 w-full rounded-md"
             >
               Run Code
-            </button>
+            </Button>
             <textarea
               style={{
                 resize: "none",
                 border: "2px solid black",
                 fontSize: "20px",
-                height: "calc(108vh - 280px)",
+                height: "calc(107vh - 280px)",
               }}
               className="w-full mt-4"
               readOnly
