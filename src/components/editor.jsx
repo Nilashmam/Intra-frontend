@@ -7,7 +7,13 @@ import io from 'socket.io-client'
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 import { LANGUAGE_VERSIONS } from './languages';
-
+import {
+  Card,
+  Input,
+  Checkbox,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
 
 
 
@@ -82,13 +88,13 @@ const editor = () => {
 
   return (
     <div>
-      <div className="justify-start flex">
-        <div className='p-4'>
+      <div className="justify-center flex">
+        <div className='p-1'>
           <LanguageSelector language={language} onSelect={onSelect} />
           <Editor
-            theme="vs-dark"
-            height='800px'
-            width='1250px'
+             height="84vh"
+             width="1180px"
+             theme="vs-dark"
             language={language}
             value={value}
             options={{ fontSize: 20 }}
@@ -97,14 +103,21 @@ const editor = () => {
           />
         </div>
         <div style={{ padding: '5px' }}>
-          <button
-            style={{ marginTop: '55px', width: '120%', border: '2px solid black', fontSize: '20px' }}
+          <Button
+            style={{ border: "2px solid black" }}
+              className="mt-10 w-full rounded-md"
             onClick={runCode}
           >
             Run Code
-          </button>
+          </Button>
           <textarea
-            style={{ marginTop: '7px', width: '120%', height: '757px', resize: 'none', border: '2px solid black', fontSize: '20px' }}
+            style={{
+              resize: "none",
+              border: "2px solid black",
+              fontSize: "20px",
+              height: "calc(107vh - 280px)",
+            }}
+            className="w-full mt-4"
             readOnly
             value={"output here -  \n"+code}
           />
