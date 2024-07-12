@@ -40,19 +40,19 @@ const receiverDashboard = () => {
     <div>
       <Logout />
 
-      <div className="justify-start flex">
-        <div className="p-4">
+      <div className="justify-center flex">
+        <div className="p">
           <div className="justify-start flex p-2">
             <p className="pr-4">
               <b>Share this room with candidate : </b>
             </p>
             <textarea
               style={{
-                height: "30px",
                 resize: "none",
                 border: "2px Solid black",
                 borderRadius: "5px",
               }}
+              className="h-8"
               readOnly
               value={`${urlCode}`}
             />
@@ -73,7 +73,7 @@ const receiverDashboard = () => {
           <div style={{ padding: "5px" }} className="w-96">
             <button
               style={{ border: "2px solid black", fontSize: "20px" }}
-              className="mt-14 w-full"
+              className="mt-10 w-full rounded-md"
             >
               Run Code
             </button>
