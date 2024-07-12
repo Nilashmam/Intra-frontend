@@ -28,7 +28,7 @@ const nameInput = () => {
         <Card
           className="flex-row"
           shadow={false}
-          style={{ border: "2px solid black", marginTop: "7%"}}
+          style={{ border: "2px solid black"}}
         >
           <img
             src="https://images.pexels.com/photos/11982694/pexels-photo-11982694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
