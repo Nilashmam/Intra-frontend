@@ -34,14 +34,14 @@ const home = () => {
           </div>
           <div className="flex justify-center">
             <div className="p-4">
-              <Button className="px-10 py-5 rounded-full">
-                <Link to="/register">Register</Link>
-              </Button>
+              <Link to="/register">
+                <Button className="px-10 py-5 rounded-full">Register</Button>
+              </Link>
             </div>
             <div className="p-4">
-              <Button className="px-12 py-5 rounded-full">
-                <Link to="/login">Login</Link>
-              </Button>
+              <Link to="/login">
+                <Button className="px-12 py-5 rounded-full">Login</Button>
+              </Link>
             </div>
           </div>
         </div>
