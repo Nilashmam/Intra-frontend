@@ -1,13 +1,53 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
+import {
+  Card,
+  Input,
+  Checkbox,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
+
 const home = () => {
   return (
     <div>
-        <h1>Home</h1>
-        <button><Link to='/register'>Register</Link></button>
-        <button><Link to='/login'>Login</Link></button>
-    </div>
-  )
-}
+      <div
+        className="h-screen bg-cover  bg-center flex justify-center items-center"
+        style={{
+          backgroundImage:
+            "url('https://images.pexels.com/photos/5088017/pexels-photo-5088017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        }}
+      >
+        <img
+          className="relative"
+          src="https://i.postimg.cc/xdFfJv47/Black-And-White-Aesthetic-Minimalist-Modern-Simple-Typography-Coconut-Cosmetics-Logo-removebg-previe.png"
+        ></img>
 
-export default home
+        <div className="text-center">
+          <div>
+            <p className="font-mono text-3xl font-bold w-69 p-10">
+              A website designed for conducting interviews where candidates can
+              participate in interviews and interviewers can efficiently manage
+              and conduct them.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <div className="p-4">
+              <Button className="px-10 py-5 rounded-full">
+                <Link to="/register">Register</Link>
+              </Button>
+            </div>
+            <div className="p-4">
+              <Button className="px-12 py-5 rounded-full">
+                <Link to="/login">Login</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default home;

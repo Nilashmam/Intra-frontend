@@ -23,7 +23,7 @@ const logout = () => {
           borderRadius: "5px",
           border: "2px Solid black",
         }}
-        fullwidth
+        fullwidth="true"
       >
         Logout
       </Button>
